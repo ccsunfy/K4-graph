@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 import time
-
+import math
 dic = {}
 edges = []
 
-pointNum = 40
+pointNum = 15
 
 
 def factorial(n):
@@ -16,8 +16,7 @@ def factorial(n):
 
 
 def comb(n, m):
-    return factorial(n) / (factorial(n - m) * factorial(m))
-
+    return math.floor((factorial(n) / (factorial(n - m) * factorial(m))) / (2 ** 5))
 
 def initModel():
     global dic
